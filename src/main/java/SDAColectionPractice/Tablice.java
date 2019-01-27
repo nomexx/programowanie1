@@ -17,6 +17,22 @@ public class Tablice {
         System.out.println("");
         System.out.println(Arrays.toString(produkty));
 
+
+        Produkt panel=new Produkt("Panel debowy",2);
+        //produkty[2]=panel;
+        produkty= dodajProdukt(produkty,panel);
+
+
+        System.out.println("");
+        System.out.println(Arrays.toString(produkty));
+
+    }
+
+    private static Produkt[] dodajProdukt(Produkt[] produkty,Produkt produkt) {
+        int dlugosc= produkty.length;
+        Produkt[] nowaTablica=Arrays.copyOf(produkty,dlugosc+1);
+        nowaTablica[dlugosc]=produkt;
+        return nowaTablica;
     }
 
 }
