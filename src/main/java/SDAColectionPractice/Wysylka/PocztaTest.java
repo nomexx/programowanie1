@@ -20,12 +20,18 @@ public class PocztaTest {
     public void zamianaProduktu() {
         poczta.zamien(okno, panel);
         System.out.println("II test: " + "\n" + poczta);
+
+    }
+    public void zamianaBrakujacegoProduktu(){
+        poczta.zamien(deska,okno);
+        System.out.println("III test: "+"\n"+poczta);
     }
 
     public static void main(String[] args) {
         PocztaTest pocztaTest = new PocztaTest();
         pocztaTest.dodajProdukt();
         pocztaTest.zamianaProduktu();
+        pocztaTest.zamianaBrakujacegoProduktu();
     }
 
 }

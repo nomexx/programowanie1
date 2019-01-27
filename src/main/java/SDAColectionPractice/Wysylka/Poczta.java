@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Poczta {
+    public static final int PRODUKT_NIE_ISTNIEJE= -1;
 
     private List<Produkt> produkts = new ArrayList<>();
 
@@ -20,8 +21,11 @@ public class Poczta {
 
     public void zamien(Produkt staryProdukt, Produkt nowyProdukt) {
         final int index = produkts.indexOf(staryProdukt);
-        produkts.set(index, nowyProdukt);
+        if (index != PRODUKT_NIE_ISTNIEJE) {
+            produkts.set(index, nowyProdukt);
+        } else {
+            System.out.println("\n"+"Nie ma takiego produktu");
+        }
     }
-
 
 }
