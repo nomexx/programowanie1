@@ -7,18 +7,21 @@ import java.util.List;
 
 public class Dostawca {
     private String nazwa;
-    private List<Produkt>produkts= new ArrayList<>();
+    private List<Produkt> produkts = new ArrayList<>();
 
-    public Dostawca(String nazwa){
-        this.nazwa=nazwa;
+    public Dostawca(String nazwa) {
+        this.nazwa = nazwa;
     }
-    public void setNazwa(){
-        this.nazwa=nazwa;
+
+    public void setNazwa() {
+        this.nazwa = nazwa;
     }
-    public String getNazwa(){
+
+    public String getNazwa() {
         return nazwa;
     }
-    public List<Produkt> produkts(){
+
+    public List<Produkt> produkts() {
         return produkts;
     }
 

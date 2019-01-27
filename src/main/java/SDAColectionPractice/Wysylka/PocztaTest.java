@@ -22,9 +22,24 @@ public class PocztaTest {
         System.out.println("II test: " + "\n" + poczta);
 
     }
-    public void zamianaBrakujacegoProduktu(){
-        poczta.zamien(deska,okno);
-        System.out.println("III test: "+"\n"+poczta);
+
+    public void zamianaBrakujacegoProduktu() {
+        poczta.zamien(deska, okno);
+        System.out.println("III test: " + "\n" + poczta);
+    }
+
+    public void podzialNaAuta(){
+        Poczta pocztaBusy= new Poczta();
+        pocztaBusy.dodaj(okno);
+        pocztaBusy.dodaj(deska);
+        pocztaBusy.dodaj(panel);
+        pocztaBusy.dodaj(drzwi);
+
+
+        pocztaBusy.przygotujPrzesylke();
+
+        System.out.println("IV test: "+"\n"+"zawartosc malego busa"+ pocztaBusy.getMalyBusProdukty());
+        System.out.println("zawartosc duzego busa"+pocztaBusy.getDuzyBusProdukty());
     }
 
     public static void main(String[] args) {
@@ -32,6 +47,7 @@ public class PocztaTest {
         pocztaTest.dodajProdukt();
         pocztaTest.zamianaProduktu();
         pocztaTest.zamianaBrakujacegoProduktu();
+        pocztaTest.podzialNaAuta();
     }
 
 }

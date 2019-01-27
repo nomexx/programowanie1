@@ -1,8 +1,21 @@
 package SDAColectionPractice;
 
+import java.util.Comparator;
+
 public class Produkt {
     private String nazwa;
     private int waga;
+
+//   public Comparator<Produkt>WZGLEDEM_WAGI = new Comparator<Produkt>() {
+//        @Override
+//        public int compare(Produkt p1, Produkt p2) {
+//            return p1.getWaga()<p2.getWaga()? -1:1;
+//        }
+//    };
+   public static final Comparator<Produkt>WAGAKOMPARATOR(){
+       return Comparator.comparing(Produkt::getWaga);
+    }
+
 
 
     public Produkt(String nazwa, int waga) {
@@ -19,11 +32,13 @@ public class Produkt {
         return waga;
 
     }
-    public void setNazwa(){
-        this.nazwa=nazwa;
+
+    public void setNazwa() {
+        this.nazwa = nazwa;
     }
-    public void setWaga(){
-        this.waga=waga;
+
+    public void setWaga() {
+        this.waga = waga;
     }
 
     @Override
