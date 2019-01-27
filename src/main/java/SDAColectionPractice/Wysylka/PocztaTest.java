@@ -4,12 +4,20 @@ import SDAColectionPractice.Produkt;
 
 public class PocztaTest {
 
-    Produkt drzwi = new Produkt("Drzwi", 30);
-    Produkt okno = new Produkt("okno", 15);
-    Produkt panel = new Produkt("panel", 2);
-    Produkt deska = new Produkt("deska", 1);
+    private Produkt drzwi = new Produkt("Drzwi", 30);
+    private Produkt okno = new Produkt("okno", 15);
+    private Produkt panel = new Produkt("panel", 2);
+    private Produkt deska = new Produkt("deska", 1);
 
     private Poczta poczta = new Poczta();
+
+    public static void main(String[] args) {
+        PocztaTest pocztaTest = new PocztaTest();
+        pocztaTest.dodajProdukt();
+        pocztaTest.zamianaProduktu();
+        pocztaTest.zamianaBrakujacegoProduktu();
+        pocztaTest.podzialNaAuta();
+    }
 
     public void dodajProdukt() {
         poczta.dodaj(okno);
@@ -28,8 +36,8 @@ public class PocztaTest {
         System.out.println("III test: " + "\n" + poczta);
     }
 
-    public void podzialNaAuta(){
-        Poczta pocztaBusy= new Poczta();
+    public void podzialNaAuta() {
+        Poczta pocztaBusy = new Poczta();
         pocztaBusy.dodaj(okno);
         pocztaBusy.dodaj(deska);
         pocztaBusy.dodaj(panel);
@@ -38,16 +46,8 @@ public class PocztaTest {
 
         pocztaBusy.przygotujPrzesylke();
 
-        System.out.println("IV test: "+"\n"+"zawartosc malego busa"+ pocztaBusy.getMalyBusProdukty());
-        System.out.println("zawartosc duzego busa"+pocztaBusy.getDuzyBusProdukty());
-    }
-
-    public static void main(String[] args) {
-        PocztaTest pocztaTest = new PocztaTest();
-        pocztaTest.dodajProdukt();
-        pocztaTest.zamianaProduktu();
-        pocztaTest.zamianaBrakujacegoProduktu();
-        pocztaTest.podzialNaAuta();
+        System.out.println("IV test: " + "\n" + "zawartosc malego busa" + pocztaBusy.getMalyBusProdukty());
+        System.out.println("zawartosc duzego busa" + pocztaBusy.getDuzyBusProdukty());
     }
 
 }

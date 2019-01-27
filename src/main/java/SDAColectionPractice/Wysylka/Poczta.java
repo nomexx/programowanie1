@@ -46,8 +46,8 @@ public class Poczta {
         //znalesc index od ktorego w duzym
         int indexPodzialu = podzial();
         // przypisac do busow
-        malyBusProdukty= produkts.subList(0,indexPodzialu);
-        duzyBusProdukty=produkts.subList(indexPodzialu,produkts.size());
+        malyBusProdukty = produkts.subList(0, indexPodzialu);
+        duzyBusProdukty = produkts.subList(indexPodzialu, produkts.size());
 
 
     }
