@@ -12,4 +12,5 @@ public class Poczta {
     public void dodaj(Produkt produkt) {
         produkts.add(produkt);
     }
+    public  String toString(){return produkts.toString();}
 }
