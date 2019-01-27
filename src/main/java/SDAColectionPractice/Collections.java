@@ -2,6 +2,7 @@ package SDAColectionPractice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 public class Collections {
@@ -17,6 +18,19 @@ public class Collections {
         produkty.add(okno);
         produkty.add(panel);
 
-        System.out.println(produkty);
+        Iterator<Produkt> iterator= produkty.iterator();
+
+        while (iterator.hasNext()){
+            Produkt produkt= iterator.next();
+
+            if (produkt.getWaga() >= 15) {
+                System.out.println(produkt);
+            } else {
+                iterator.remove();
+            }
+        }
+
+
+
     }
-    }
+}
