@@ -29,7 +29,28 @@ public class Collections {
                 iterator.remove();
             }
         }
+    /* Metoda z klasycznym for
+     for(int i=0;i<produkty.size();i++){
+            if (((ArrayList<Produkt>)produkty).get(i).getWaga()>=15){
+                System.out.println(((ArrayList<Produkt>)produkty).get(i));
+            }else {
+                produkty.remove(i);
+            }
 
+        }   */
+        System.out.println(produkty.size());
+        System.out.println(produkty.isEmpty());
+        System.out.println(produkty.contains(panel));
+        System.out.println(produkty.contains(drzwi));
+
+        Collection<Produkt> nowaListe= new ArrayList<>();
+        nowaListe.add(okno);
+        nowaListe.add(drzwi);
+
+
+        produkty.removeAll(nowaListe);
+        System.out.println(produkty);
+        System.out.println(produkty.isEmpty());
 
 
     }
