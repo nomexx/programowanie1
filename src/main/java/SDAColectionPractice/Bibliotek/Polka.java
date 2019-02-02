@@ -32,4 +32,7 @@ public class Polka {
                 ", polka=" + polka +
                 '}';
     }
+    public  List<Ksiazka> getListaKsiazek(){
+        return  polka;
+    }
 }

@@ -27,13 +27,43 @@ public class BibliotekaTest {
     public void wypiszZawartosc(){
         System.out.println("II test: "+ biblioteka.wypiszZawartosc(no1)+"\n"+ biblioteka.wypiszZawartosc(no2));
     }
+    public void przelozKsiazke(){
 
+    }
+    public void poOproznieniu(){
+        biblioteka.oproznijPolke(no2);
+        System.out.println("III test:"+no2);
+    }
+public void ileNaPolce(){
+    System.out.println("IV test:"+"\n"+"Mamy "+ (biblioteka.liczbaKsiazeknaPolce(no1))+" ksiazki");}
+
+    public void  miejsce(){
+        int miejsceNaPolce=biblioteka.nrPozycjinaPolce(ksiazeMgly, no1);
+
+        if(miejsceNaPolce==0){
+           System.out.println("Test V: Ksiazka nie wystepuje na tej polce");
+       }else {
+           System.out.println("Test V: "+ miejsceNaPolce);
+       }
+    }
+
+    public void przelozKsiazki(){
+        biblioteka.przelozKsiazke(no1,malyKsiaze,no2);
+        System.out.println("Test VI:"+ biblioteka.wypiszZawartosc(no1)+ "\n"+ biblioteka.wypiszZawartosc(no2));
+    }
+    public void usunKsiazki (){
+        biblioteka.usunKilkaKsiazek(no1,1, 3);
+        System.out.println("Test VII: "+no1);
+    }
 
     public static void main(String[] args) {
         BibliotekaTest bibliotekaTest= new BibliotekaTest();
         bibliotekaTest.dodanieNaPolke();
         bibliotekaTest.wypiszZawartosc();
-
-;;
+     //   bibliotekaTest.poOproznieniu();
+        bibliotekaTest.ileNaPolce();
+        bibliotekaTest.miejsce();
+   // bibliotekaTest.przelozKsiazki();
+        bibliotekaTest.usunKsiazki();
     }
 }
