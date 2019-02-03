@@ -13,9 +13,24 @@ public class KatalogProduktowTest {
 
     static {
         zbyszek.getListaProduktow().add(drzwi);
-        zbyszek.getListaProduktow().add(okno);
+        zbyszek.getListaProduktow().add(drzwi);
+        zbyszek.getListaProduktow().add(new Produkt("Drzwi", 30));
+        zbyszek.getListaProduktow().add(panel);
         roman.getListaProduktow().add(panel);
+        roman.getListaProduktow().add(drzwi);
         roman.getListaProduktow().add(deska);
+        zbyszek.getListaProduktow().add(okno);
+    }
+
+
+    public static void main(String[] args) {
+        KatalogProduktow katalogProduktow= new KatalogProduktow();
+        System.out.println( zbyszek.getListaProduktow());
+        katalogProduktow.zapewnianyPrzez(zbyszek);
+      //  katalogProduktow.zapewnianyPrzez(roman);
+        System.out.println(katalogProduktow.produkty);
+        System.out.println(katalogProduktow.malyVan());
+        System.out.println(katalogProduktow.duzyVan());
     }
 
 }

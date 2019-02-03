@@ -1,6 +1,7 @@
 package SDAColectionPractice;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Produkt {
     private String nazwa;
@@ -9,6 +10,20 @@ public class Produkt {
     public Produkt(String nazwa, int waga) {
         this.nazwa = nazwa;
         this.waga = waga;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Produkt produkt = (Produkt) o;
+        return waga == produkt.waga &&
+                Objects.equals(nazwa, produkt.nazwa);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nazwa, waga);
     }
 
     //   public Comparator<Produkt>WZGLEDEM_WAGI = new Comparator<Produkt>() {
