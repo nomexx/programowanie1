@@ -10,7 +10,7 @@ public class RejestrOsobTest {
     Osoba osoba2= new Osoba("Kazik","Kazik", 23);
     Osoba osoba3= new Osoba("Anna","Mucha",22);
     Osoba osoba4 = new Osoba("Krzysztof","Krawczyk",55);
-    Osoba osoba5= new Osoba("Anna", "Gie", 35);
+    Osoba osoba5= new Osoba("Anna", "Gie", 55);
     Osoba osoba6 = new Osoba("Zenek", "Martyniuk", 66);
 
 RejestrOsob rejestrOsob = new RejestrOsob();
